@@ -16,8 +16,9 @@ export default function Layout({ children }: ILayoutProps) {
 	const menuItems: IMenuItem[] = [
 		{ title: 'Ínicio', path: '#inicio' },
 		{ title: 'A Banda', path: '#banda' },
-		{ title: 'Elementos', path: '#elementos' },
-		{ title: 'Agenda', path: '#agenda' },
+		/* { title: 'Elementos', path: '#elementos' }, */
+		{ title: 'Repertório', path: '#repertorio' },
+		/* { title: 'Agenda', path: '#agenda' }, */
 		{ title: 'Galeria', path: '#galeria' },
 		{ title: 'Contactos', path: '#contactos' },
 	];
@@ -31,9 +32,9 @@ export default function Layout({ children }: ILayoutProps) {
 				className='drawer-toggle'
 				readOnly
 			/>
-			<div className='drawer-content flex flex-col'>
+			<div className='flex flex-col drawer-content'>
 				<Header menuItems={menuItems} />
-				<div className='h-full w-full mt-16'>{children}</div>
+				<div className='w-full h-full mt-16'>{children}</div>
 			</div>
 			<SideBar menuItems={menuItems} />
 		</div>
