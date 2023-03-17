@@ -41,8 +41,8 @@ export default function Header({ menuItems }: IHeaderProps) {
 								className='relative font-semibold uppercase group'
 								key={path}>
 								<Link href={path}>{title}</Link>
-								<span className='absolute -bottom-1 left-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all'></span>
-								<span className='absolute -bottom-1 right-1/2 w-0 h-[2px] bg-black group-hover:w-1/2 group-hover:transition-all'></span>
+								<span className='absolute -bottom-1 left-1/2 w-0 h-[2px] bg-orange-500 group-hover:w-1/2 group-hover:transition-all'></span>
+								<span className='absolute -bottom-1 right-1/2 w-0 h-[2px] bg-orange-500 group-hover:w-1/2 group-hover:transition-all'></span>
 							</li>
 						))}
 					</ul>

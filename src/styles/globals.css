@@ -9,3 +9,12 @@
 		font-family: 'Poppins', sans-serif;
 	}
 }
+
+div.swiper-button-prev,
+div.swiper-button-next {
+color: #ffffff;
+}
+
+span.swiper-pagination-bullet {
+background-color: #ffffff;
+}
