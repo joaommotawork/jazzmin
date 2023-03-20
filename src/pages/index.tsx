@@ -25,10 +25,10 @@ export default function Index() {
 	const [dates, setDates] = useState(calendarDates);
 
 	return (
-		<div className='w-full h-full overflow-scroll snap-mandatory snap-y scroll-smooth'>
+		<div className='w-full h-full overflow-scroll lg:snap-mandatory lg:snap-y scroll-smooth'>
 			<div
 				id='inicio'
-				className='relative w-full h-full snap-start snap-always'>
+				className='relative w-full h-full lg:snap-start lg:snap-always'>
 				<Image
 					src={banner3}
 					alt='Elementos Jazzmin'
@@ -51,8 +51,8 @@ export default function Index() {
 			</div>
 			<div
 				id='banda'
-				className='flex flex-col items-center justify-center w-full h-full gap-3 p-20 snap-start snap-always'>
-				<h1 className='mb-3 text-5xl font-medium underline uppercase md:w-2/3 underline-offset-8 decoration-orange-500'>
+				className='flex flex-col items-center justify-center gap-3 p-5 lg:w-full lg:h-full lg:p-20 lg:snap-start lg:snap-always'>
+				<h1 className='mb-3 text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500'>
 					A Banda
 				</h1>
 				<p className='text-justify md:w-2/3 indent-3'>
@@ -93,11 +93,11 @@ export default function Index() {
 			</div>
 			{/* <div
 				id='elementos'
-				className='w-full h-full p-20 snap-start snap-always'></div> */}
+				className='w-full h-full p-5 lg:p-20 lg:snap-start lg:snap-always'></div> */}
 			<div
 				id='repertorio'
-				className='flex flex-col items-center justify-center w-full h-full gap-3 p-20 snap-start snap-always'>
-				<h1 className='mb-3 text-5xl font-medium underline uppercase md:w-2/3 underline-offset-8 decoration-orange-500'>
+				className='flex flex-col items-center justify-center gap-3 p-5 lg:w-full lg:h-full lg:p-20 lg:snap-start lg:snap-always'>
+				<h1 className='mb-3 text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500'>
 					Repertório
 				</h1>
 				<p>
@@ -111,217 +111,128 @@ export default function Index() {
 					</a>
 				</p>
 				<div className='flex flex-col w-full gap-3 md:flex-row md:w-2/3'>
-					<table className='w-full text-left whitespace-no-wrap table-auto'>
-						<thead>
-							<tr>
-								<th className='px-4 py-3 text-sm font-medium tracking-wider text-gray-900 bg-gray-100 rounded-tl rounded-bl title-font'>
-									Música
-								</th>
-								<th className='px-4 py-3 text-sm font-medium tracking-wider text-gray-900 bg-gray-100 title-font'>
-									Artista
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td className='px-4 py-3'>Summertime</td>
-								<td className='px-4 py-3'>George Gershwin</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-gray-200'>
-									Os Bravos - (Tradicional Açoriano)
-								</td>
-								<td className='px-4 py-3 border-t-2 border-gray-200'>
-									Arranjo de Nelson RIbeiro
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-gray-200'>
-									Sweet and Low-Down
-								</td>
-								<td className='px-4 py-3 border-t-2 border-gray-200'>
-									George Gershwin
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Les Feuilles Mort
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Joseph Kosma
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Chamarrita Coxa - (Tradicional Açoriano)
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Composição de Nuno Mendes
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Barquinha Feiticeira - (Tradicional
-									Açoriano)
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Arranjo de Nuno Mendes
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Strike up the Band
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									George Gershwin
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									As Minhas Penas - (Tradicional Açoriano) -
-									[Tributo a Humberto Pinheiro]
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Arranjo de André Neves
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Moon River
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Henry Mancini
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Milord
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Edith Piaf
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Chamateia - (Tradicional Açoriano)
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Arranjo de Nelson Ribeiro
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Saudade - (Tradicional Açoriano)
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Arranjo de Nuno Mendes
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<table className='w-full text-left whitespace-no-wrap table-auto'>
-						<thead>
-							<tr>
-								<th className='px-4 py-3 text-sm font-medium tracking-wider text-gray-900 bg-gray-100 rounded-tl rounded-bl title-font'>
-									Música
-								</th>
-								<th className='px-4 py-3 text-sm font-medium tracking-wider text-gray-900 bg-gray-100 title-font'>
-									Artista
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td className='px-4 py-3'>La Vie En Rose</td>
-								<td className='px-4 py-3'>Edith Piaf</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									What a Wonderful World
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									George Wiess/Bob Thiele
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									My Baby Just Cares For Me
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Walter Donaldson
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Fly Me To The Moon
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Bart Howard
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									New York, New York…
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									John Kander
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Hymne à l’amour
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Edith Piaf & Marguertie Monnot
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Moon River
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Henry Mancini
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									My Funny Valentine
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Richard Rodgers & Lorenz Hart
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Night and Day
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Cole Porter
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									I’ve Got Rhythm
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									George & Ira Gershwin
-								</td>
-							</tr>
-							<tr>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									Slap That Bass
-								</td>
-								<td className='px-4 py-3 border-t-2 border-b-2 border-gray-200'>
-									George & Ira Gershwin
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<div>
+						<p className='px-4 py-3'>
+							Summertime:{' '}
+							<span className='font-bold'>George Gershwin</span>
+						</p>
+						<p className='px-4 py-3'>
+							Os Bravos - (Tradicional Açoriano):{' '}
+							<span className='font-bold'>
+								Arranjo de Nelson Ribeiro
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Sweet and Low-Down:{' '}
+							<span className='font-bold'>George Gershwin</span>
+						</p>
+						<p className='px-4 py-3'>
+							Les Feuilles Mort:{' '}
+							<span className='font-bold'>Joseph Kosma</span>
+						</p>
+						<p className='px-4 py-3'>
+							Chamarrita Coxa - (Tradicional Açoriano):{' '}
+							<span className='font-bold'>
+								Composição de Nuno Mendes
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Barquinha Feiticeira - (Tradicional Açoriano):{' '}
+							<span className='font-bold'>
+								Arranjo de Nuno Mendes
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Strike up the Band:{' '}
+							<span className='font-bold'>George Gershwin</span>
+						</p>
+						<p className='px-4 py-3'>
+							As Minhas Penas - (Tradicional Açoriano) - [Tributo
+							a Humberto Pinheiro]:{' '}
+							<span className='font-bold'>
+								Arranjo de André Neves
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Moon River:{' '}
+							<span className='font-bold'>Henry Mancini</span>
+						</p>
+						<p className='px-4 py-3'>
+							Milord:{' '}
+							<span className='font-bold'>Edith Piaf</span>
+						</p>
+						<p className='px-4 py-3'>
+							Chamateia - (Tradicional Açoriano):{' '}
+							<span className='font-bold'>
+								Arranjo de Nelson Ribeiro
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Saudade - (Tradicional Açoriano):{' '}
+							<span className='font-bold'>
+								Arranjo de Nuno Mendes
+							</span>
+						</p>
+					</div>
+					<div>
+						<p className='px-4 py-3'>
+							La Vie En Rose:{' '}
+							<span className='font-bold'>Edith Piaf</span>
+						</p>
+						<p className='px-4 py-3'>
+							What a Wonderful World:{' '}
+							<span className='font-bold'>
+								George Wiess/Bob Thiele
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							My Baby Just Cares For Me:{' '}
+							<span className='font-bold'>Walter Donaldson</span>
+						</p>
+						<p className='px-4 py-3'>
+							Fly Me To The Moon:{' '}
+							<span className='font-bold'>Bart Howard</span>
+						</p>
+						<p className='px-4 py-3'>
+							New York, New York…:{' '}
+							<span className='font-bold'>John Kander</span>
+						</p>
+						<p className='px-4 py-3'>
+							Hymne à l’amour:{' '}
+							<span className='px-4 py-3'>
+								Edith Piaf & Marguertie Monnot
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Moon River:{' '}
+							<span className='font-bold'>Henry Mancini</span>
+						</p>
+						<p className='px-4 py-3'>
+							My Funny Valentine:{' '}
+							<span className='font-bold'>
+								Richard Rodgers & Lorenz Hart
+							</span>
+						</p>
+						<p className='px-4 py-3'>
+							Night and Day:{' '}
+							<span className='font-bold'>Cole Porter</span>
+						</p>
+						<p className='px-4 py-3'>
+							Night and Day:{' '}
+							<span className='font-bold'>Cole Porter</span>
+						</p>
+						<p className='px-4 py-3'>
+							I’ve Got Rhythm:{' '}
+							<span className='font-bold'>
+								George & Ira Gershwin
+							</span>
+						</p>
+					</div>
 				</div>
 			</div>
 			{/* <div
 				id='agenda'
-				className='flex w-full h-full p-20 snap-start snap-always'>
+				className='flex p-5 lg:w-full lg:h-full lg:p-20 lg:snap-start lg:snap-always'>
 				<div className='flex items-center justify-center w-full h-full'>
 					<Calendar
 						locale='pt-PT'
@@ -334,7 +245,7 @@ export default function Index() {
 			</div> */}
 			<div
 				id='galeria'
-				className='w-full h-full p-20 snap-start snap-always'>
+				className='w-full h-full p-5 lg:p-20 lg:snap-start lg:snap-always'>
 				<Swiper
 					className='w-full h-full'
 					spaceBetween={50}
@@ -389,7 +300,7 @@ export default function Index() {
 			</div>
 			<div
 				id='contactos'
-				className='relative w-full h-full p-20 snap-start snap-always'>
+				className='relative p-5 lg:w-full lg:h-full lg:p-20 lg:snap-start lg:snap-always'>
 				<div className='absolute inset-0 m-20'>
 					<iframe
 						width='100%'
@@ -407,7 +318,7 @@ export default function Index() {
 				</div>
 				<div className='container flex px-5 py-24 mx-auto'>
 					<div className='relative z-10 flex flex-col w-full gap-4 p-8 mt-10 bg-white rounded-lg shadow-md lg:w-1/3 md:w-1/2 md:ml-auto md:mt-0'>
-						<h1 className='mb-3 text-5xl font-medium underline uppercase md:w-2/3 underline-offset-8 decoration-orange-500'>
+						<h1 className='mb-3 text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500'>
 							Contactos
 						</h1>
 						<p>
