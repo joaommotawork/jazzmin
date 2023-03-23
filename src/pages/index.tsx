@@ -204,10 +204,6 @@ export default function Index() {
 							</span>
 						</p>
 						<p className='px-4 py-3'>
-							Moon River:{' '}
-							<span className='font-bold'>Henry Mancini</span>
-						</p>
-						<p className='px-4 py-3'>
 							My Funny Valentine:{' '}
 							<span className='font-bold'>
 								Richard Rodgers & Lorenz Hart
