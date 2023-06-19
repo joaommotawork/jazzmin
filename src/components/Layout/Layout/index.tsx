@@ -34,7 +34,7 @@ export default function Layout({ children }: ILayoutProps) {
 			/>
 			<div className='flex flex-col drawer-content'>
 				<Header menuItems={menuItems} />
-				<div className='w-full h-full mt-16'>{children}</div>
+				<div className='w-full h-full'>{children}</div>
 			</div>
 			<SideBar menuItems={menuItems} />
 		</div>
