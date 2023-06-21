@@ -22,7 +22,7 @@ function Banda({}: Props) {
 						<span className='text-xl font-bold'>
 							- Jean Daniel Senesi na Voz
 						</span>
-						<span className='text-justify indent-3'>
+						<p className='text-justify indent-3'>
 							É cantor profissional, com mais de 20 anos de
 							carreira, e também formado em dança e teatro. Ganhou
 							vários prémios em concursos internacionais de canto
@@ -39,13 +39,13 @@ function Banda({}: Props) {
 							projeto musical de grande envergadura, com várias
 							orquestras nacionais francesas, para a altura dos
 							Jogos Olímpicos Paris 2024.
-						</span>
+						</p>
 					</li>
 					<li className='pt-5'>
 						<span className='text-xl font-bold'>
 							- Nelson Ribeiro no Clarinete
 						</span>
-						<span className='text-justify indent-3'>
+						<p className='text-justify indent-3'>
 							Licenciado pela Universidade de Évora em
 							Instrumentista de Sopro, na vertente de Clarinete, e
 							pós-graduado em ensino, pela mesma instituição. Para
@@ -68,13 +68,13 @@ function Banda({}: Props) {
 							contrabaixista Cláudio Cruz cria o trio Sons em
 							Triângulo, dedicado-se à música tradicional açoriana
 							através de arranjos originais do grupo.
-						</span>
+						</p>
 					</li>
 					<li className='pt-5'>
 						<span className='text-xl font-bold'>
 							- José Sousa no Trompete
 						</span>
-						<span className='text-justify indent-3'>
+						<p className='text-justify indent-3'>
 							Natural da ilha do Pico, completou a sua formação na
 							Escola de Música do Município das Lajes do Pico e no
 							Ensino Artístico da Escola Básica e Secundária das
@@ -85,13 +85,13 @@ function Banda({}: Props) {
 							Concurso da Classe de Trompetes da EBSLP, em 2019 e
 							o 2º prémio do Concurso de Trompetes da Póvoa de
 							Varzim, na edição de 2020 e 2021.
-						</span>
+						</p>
 					</li>
 					<li className='pt-5'>
 						<span className='text-xl font-bold'>
 							- André Neves na Guitarra
 						</span>
-						<span className='text-justify indent-3'>
+						<p className='text-justify indent-3'>
 							André Neves na guitarra elétrica: Oriundo da ilha do
 							Pico, diplomado no Curso Regular na Escola de Jazz
 							Luís Villas-Boas do Hot Clube de Portugal em
@@ -105,13 +105,13 @@ function Banda({}: Props) {
 							composta por músicos da ilha. Atualmente é membro de
 							projetos estudantis como a Tuna Académica de Lisboa
 							como também de projetos Pop-Rock e Jazz em Lisboa.
-						</span>
+						</p>
 					</li>
 					<li className='pt-5'>
 						<span className='text-xl font-bold'>
 							- Nuno Mendes no Contrabaixo
 						</span>
-						<span className='indent-10'>
+						<p className='indent-10'>
 							É um picaroto natural das Ribeiras que de momento se
 							encontra a concluir o Mestrado em Ensino de Música,
 							na vertente de Ciências Musicais, na Universidade do
@@ -139,7 +139,7 @@ function Banda({}: Props) {
 							além disso, co-fundou alguns grupos musicais como o
 							Grupo de Fados da Associação Académica da
 							Universidade do Minho e Jazzmin.
-						</span>
+						</p>
 					</li>
 					<li className='pt-5'>
 						<span className='text-xl font-bold'>
