@@ -10,7 +10,7 @@ function Banda({}: Props) {
 			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
 				A Banda
 			</h1>
-			<p className='text-justify indent-3'>
+			<div className='text-justify indent-3'>
 				Jazzmin é um colectivo musical que se dedica sobretudo à
 				exploração da música tradicional açoriana, fundindo-a com as
 				sonoridades jazzísticas dos mais emblemático standards do
@@ -19,9 +19,9 @@ function Banda({}: Props) {
 				nasceram ou residem:
 				<ol className='flex flex-col gap-2'>
 					<li className='pt-5'>
-						<p className='text-xl font-bold'>
+						<span className='text-xl font-bold'>
 							- Jean Daniel Senesi na Voz
-						</p>
+						</span>
 						<span className='text-justify indent-3'>
 							É cantor profissional, com mais de 20 anos de
 							carreira, e também formado em dança e teatro. Ganhou
@@ -42,9 +42,9 @@ function Banda({}: Props) {
 						</span>
 					</li>
 					<li className='pt-5'>
-						<p className='text-xl font-bold'>
+						<span className='text-xl font-bold'>
 							- Nelson Ribeiro no Clarinete
-						</p>
+						</span>
 						<span className='text-justify indent-3'>
 							Licenciado pela Universidade de Évora em
 							Instrumentista de Sopro, na vertente de Clarinete, e
@@ -71,9 +71,9 @@ function Banda({}: Props) {
 						</span>
 					</li>
 					<li className='pt-5'>
-						<p className='text-xl font-bold'>
+						<span className='text-xl font-bold'>
 							- José Sousa no Trompete
-						</p>
+						</span>
 						<span className='text-justify indent-3'>
 							Natural da ilha do Pico, completou a sua formação na
 							Escola de Música do Município das Lajes do Pico e no
@@ -88,9 +88,9 @@ function Banda({}: Props) {
 						</span>
 					</li>
 					<li className='pt-5'>
-						<p className='text-xl font-bold'>
+						<span className='text-xl font-bold'>
 							- André Neves na Guitarra
-						</p>
+						</span>
 						<span className='text-justify indent-3'>
 							André Neves na guitarra elétrica: Oriundo da ilha do
 							Pico, diplomado no Curso Regular na Escola de Jazz
@@ -108,9 +108,9 @@ function Banda({}: Props) {
 						</span>
 					</li>
 					<li className='pt-5'>
-						<p className='text-xl font-bold'>
+						<span className='text-xl font-bold'>
 							- Nuno Mendes no Contrabaixo
-						</p>
+						</span>
 						<span className='indent-10'>
 							É um picaroto natural das Ribeiras que de momento se
 							encontra a concluir o Mestrado em Ensino de Música,
@@ -142,9 +142,9 @@ function Banda({}: Props) {
 						</span>
 					</li>
 					<li className='pt-5'>
-						<p className='text-xl font-bold'>
+						<span className='text-xl font-bold'>
 							- Duarte Dutra na Bateria
-						</p>
+						</span>
 						<span className='text-justify indent-3'>
 							Oriundo da ilha do Pico, Madalena, começou os seus
 							estudos como autodidata, através das filarmónicas
@@ -159,7 +159,7 @@ function Banda({}: Props) {
 						</span>
 					</li>
 				</ol>
-			</p>
+			</div>
 			<p className='text-justify indent-3'>
 				Estes músicos provêm de origens musicais distintas que vão da
 				música clássica ao Jazz. Trabalhando a partir da Ilha do Pico,

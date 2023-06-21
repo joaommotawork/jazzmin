@@ -27,7 +27,7 @@ function Contactos({}: Props) {
 					<h1 className='mb-3 text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500'>
 						Contactos
 					</h1>
-					<p>
+					<div>
 						<p className='text-2xl'>Produção</p>
 						<span>
 							<p>Jean Daniel Senesi</p>
@@ -40,8 +40,8 @@ function Contactos({}: Props) {
 								<span className='absolute -bottom-1 right-1/2 w-0 h-[2px] bg-orange-500 group-hover:w-1/2 group-hover:transition-all'></span>
 							</a>
 						</span>
-					</p>
-					<p>
+					</div>
+					<div>
 						<p className='text-2xl'>Comunicação</p>
 						<span>
 							<p>Nelson Ribeiro</p>
@@ -54,7 +54,7 @@ function Contactos({}: Props) {
 								<span className='absolute -bottom-1 right-1/2 w-0 h-[2px] bg-orange-500 group-hover:w-1/2 group-hover:transition-all'></span>
 							</a>
 						</span>
-					</p>
+					</div>
 				</div>
 			</div>
 		</div>

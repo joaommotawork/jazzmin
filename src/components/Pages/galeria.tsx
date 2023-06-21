@@ -149,7 +149,7 @@ function Galeria({}: Props) {
 	}, [slides]);
 
 	return (
-		<div id='galeria' className='flex flex-col gap-5 p-5 lg:p-20 lg:mx-52'>
+		<div id='galeria' className='flex flex-col h-full gap-5 p-5 lg:p-20 lg:mx-52'>
 			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
 				Galeria
 			</h1>
@@ -175,7 +175,7 @@ function Galeria({}: Props) {
 					Concerto Auditório Madalena - RTP Açores | 31/09/22
 				</button>
 			</div>
-			<div className='relative overflow-hidden px-10 w-full pt-[56.25%]'>
+			<div className='w-full h-full'>
 				<Swiper
 					className='w-full h-full'
 					spaceBetween={50}
@@ -190,8 +190,7 @@ function Galeria({}: Props) {
 								<Image
 									src={slide}
 									alt='Jazzmin'
-									layout='fill'
-									objectFit='cover'
+									fill
 									loading={'eager'}
 									priority
 								/>
