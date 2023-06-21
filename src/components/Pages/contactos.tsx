@@ -1,12 +1,10 @@
-import React from 'react'
+import { FaEnvelope, FaFacebook, FaInstagram } from 'react-icons/fa';
 
-type Props = {}
+type Props = {};
 
 function Contactos({}: Props) {
-  return (
-		<div
-			id='contactos'
-			className='relative p-5 lg:p-20 lg:mx-52'>
+	return (
+		<div id='contactos' className='relative p-5 lg:p-20 lg:mx-52'>
 			<div className='absolute inset-0 m-20'>
 				<iframe
 					width='100%'
@@ -24,7 +22,7 @@ function Contactos({}: Props) {
 			</div>
 			<div className='container flex px-5 py-24 mx-auto'>
 				<div className='relative z-10 flex flex-col w-full gap-4 p-8 mt-10 bg-white rounded-lg shadow-md lg:w-1/3 md:w-1/2 md:ml-auto md:mt-0'>
-					<h1 className='mb-3 text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500'>
+					<h1 className='mb-3 text-3xl font-medium underline uppercase md:w-2/3 underline-offset-8 decoration-orange-500'>
 						Contactos
 					</h1>
 					<div>
@@ -55,10 +53,30 @@ function Contactos({}: Props) {
 							</a>
 						</span>
 					</div>
+					<div className='flex gap-3'>
+						<a
+							href='https://instagram.com/jazzmin.oficial'
+							target='_blank'
+							className='text-2xl hover:text-orange-500'>
+							<FaInstagram />
+						</a>
+						<a
+							href='https://www.facebook.com/JazzminOficial'
+							target='_blank'
+							className='text-2xl hover:text-orange-500'>
+							<FaFacebook />
+						</a>
+						<a
+							href='mailto:jazzmin.azores@gmail.com'
+							target='_blank'
+							className='text-2xl hover:text-orange-500'>
+							<FaEnvelope />
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
-  );
+	);
 }
 
-export default Contactos
+export default Contactos;

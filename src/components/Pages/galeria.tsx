@@ -65,7 +65,7 @@ import concertoAudi35 from '../../../public/concertos/310922ConcertoAuditorioDaM
 import concertoAudi36 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi36.jpg';
 import concertoAudi37 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi37.jpg';
 import concertoAudi38 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi38.jpg';
-import { Navigation } from 'swiper';
+import { Manipulation, Navigation } from 'swiper';
 import { useEffect, useState } from 'react';
 
 type Props = {};
@@ -81,7 +81,6 @@ function Galeria({}: Props) {
 		forte6,
 		forte7,
 		forte8,
-		forte9,
 		forte9,
 		forte10,
 		forte11,
@@ -141,50 +140,62 @@ function Galeria({}: Props) {
 		concertoAudi38,
 	];
 
-	const [slides, setSlides] = useState(elementos);
-	const swiper = useSwiper();
+	const [slides, setSlides] = useState<any>(elementos);
+	const [swiperRef, setSwiperRef] = useState<any>(null);
+
+	const updateSlides = (slides: any) => {
+		setSlides(slides);
+	};
 
 	useEffect(() => {
-		swiper?.update();
+		swiperRef?.update();
+		swiperRef?.updateSlides();
+		console.log('SLIDES', slides)
 	}, [slides]);
 
+
 	return (
-		<div id='galeria' className='flex flex-col h-full gap-5 p-5 lg:p-20 lg:mx-52'>
+		<div
+			id='galeria'
+			className='flex flex-col h-full gap-5 p-5 lg:p-20 lg:mx-52'>
 			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
 				Galeria
 			</h1>
 			<div className='flex flex-col w-full gap-5 lg:flex-row'>
 				<button
 					className='flex-1 px-4 py-2 font-bold text-white bg-orange-500 rounded cursor-pointer'
-					onClick={() => setSlides(elementos)}>
+					onClick={() => updateSlides(elementos)}>
 					Elementos
 				</button>
 				<button
 					className='flex-1 px-4 py-2 font-bold text-white bg-orange-500 rounded cursor-pointer'
-					onClick={() => setSlides(musicaNoForte)}>
+					onClick={() => updateSlides(musicaNoForte)}>
 					Música No Forte | 24/07/2022
 				</button>
 				<button
 					className='flex-1 px-4 py-2 font-bold text-white bg-orange-500 rounded cursor-pointer'
-					onClick={() => setSlides(festaAcoriana)}>
+					onClick={() => updateSlides(festaAcoriana)}>
 					Festa Açoriana | 24/08/2022
 				</button>
 				<button
 					className='flex-1 px-4 py-2 font-bold text-white bg-orange-500 rounded cursor-pointer'
-					onClick={() => setSlides(concertoAudi)}>
+					onClick={() => updateSlides(concertoAudi)}>
 					Concerto Auditório Madalena - RTP Açores | 31/09/22
 				</button>
 			</div>
 			<div className='w-full h-full'>
 				<Swiper
+					onSwiper={(swiper) => {
+						setSwiperRef(swiper);
+					}}
 					className='w-full h-full'
 					spaceBetween={50}
 					slidesPerView={1}
 					navigation={true}
-					modules={[Navigation]}
+					modules={[Navigation, Manipulation]}
 					autoplay
 					loop>
-					{slides.map((slide, index) => {
+					{slides.map((slide: any, index: any) => {
 						return (
 							<SwiperSlide key={index}>
 								<Image
