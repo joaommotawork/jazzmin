@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
 import banner1 from '../../../public/images/Banner1.jpeg';
 import banner2 from '../../../public/images/Banner2.jpeg';
 import banner3 from '../../../public/images/Banner3.jpeg';
@@ -66,7 +66,7 @@ import concertoAudi36 from '../../../public/concertos/310922ConcertoAuditorioDaM
 import concertoAudi37 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi37.jpg';
 import concertoAudi38 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi38.jpg';
 import { Navigation } from 'swiper';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Props = {};
 
@@ -142,9 +142,17 @@ function Galeria({}: Props) {
 	];
 
 	const [slides, setSlides] = useState(elementos);
+	const swiper = useSwiper();
+
+	useEffect(() => {
+		swiper?.update();
+	}, [slides]);
 
 	return (
-		<div id='galeria' className='flex flex-col w-full h-full gap-5 p-5 lg:p-20'>
+		<div id='galeria' className='flex flex-col gap-5 p-5 lg:p-20 lg:mx-52'>
+			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
+				Galeria
+			</h1>
 			<div className='flex flex-col w-full gap-5 lg:flex-row'>
 				<button
 					className='flex-1 px-4 py-2 font-bold text-white bg-orange-500 rounded cursor-pointer'
@@ -164,35 +172,34 @@ function Galeria({}: Props) {
 				<button
 					className='flex-1 px-4 py-2 font-bold text-white bg-orange-500 rounded cursor-pointer'
 					onClick={() => setSlides(concertoAudi)}>
-					Concerto Auditório da Madalena - Kate Saragaço-Gomes |
-					31/09/22
+					Concerto Auditório Madalena - RTP Açores | 31/09/22
 				</button>
 			</div>
-			<Swiper
-				className='w-full h-full'
-				spaceBetween={50}
-				slidesPerView={1}
-				onSlideChange={() => console.log('slide change')}
-				onSwiper={(swiper) => console.log(swiper)}
-				navigation={true}
-				modules={[Navigation]}
-				autoplay
-				loop>
-				{slides.map((slide, index) => {
-					return (
-						<SwiperSlide key={index}>
-							<Image
-								src={slide}
-								alt='Elementos Jazzmin'
-								layout='fill'
-								objectFit='cover'
-								loading={'eager'}
-								priority
-							/>
-						</SwiperSlide>
-					);
-				})}
-			</Swiper>
+			<div className='relative overflow-hidden px-10 w-full pt-[56.25%]'>
+				<Swiper
+					className='w-full h-full'
+					spaceBetween={50}
+					slidesPerView={1}
+					navigation={true}
+					modules={[Navigation]}
+					autoplay
+					loop>
+					{slides.map((slide, index) => {
+						return (
+							<SwiperSlide key={index}>
+								<Image
+									src={slide}
+									alt='Jazzmin'
+									layout='fill'
+									objectFit='cover'
+									loading={'eager'}
+									priority
+								/>
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+			</div>
 		</div>
 	);
 }

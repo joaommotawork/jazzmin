@@ -6,11 +6,11 @@ function Banda({}: Props) {
   return (
 		<div
 			id='banda'
-			className='flex flex-col items-center justify-center gap-3 p-5 lg:p-20'>
-			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500 lg:pb-5'>
+			className='flex flex-col items-center justify-center gap-3 p-5 lg:p-20 lg:mx-52'>
+			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
 				A Banda
 			</h1>
-			<p className='text-justify md:w-2/3 indent-3'>
+			<p className='text-justify indent-3'>
 				Jazzmin é um colectivo musical que se dedica sobretudo à
 				exploração da música tradicional açoriana, fundindo-a com as
 				sonoridades jazzísticas dos mais emblemático standards do
@@ -22,7 +22,7 @@ function Banda({}: Props) {
 						<p className='text-xl font-bold'>
 							- Jean Daniel Senesi na Voz
 						</p>
-						<span className='text-justify md:w-2/3 indent-3'>
+						<span className='text-justify indent-3'>
 							É cantor profissional, com mais de 20 anos de
 							carreira, e também formado em dança e teatro. Ganhou
 							vários prémios em concursos internacionais de canto
@@ -45,7 +45,7 @@ function Banda({}: Props) {
 						<p className='text-xl font-bold'>
 							- Nelson Ribeiro no Clarinete
 						</p>
-						<span className='text-justify md:w-2/3 indent-3'>
+						<span className='text-justify indent-3'>
 							Licenciado pela Universidade de Évora em
 							Instrumentista de Sopro, na vertente de Clarinete, e
 							pós-graduado em ensino, pela mesma instituição. Para
@@ -74,7 +74,7 @@ function Banda({}: Props) {
 						<p className='text-xl font-bold'>
 							- José Sousa no Trompete
 						</p>
-						<span className='text-justify md:w-2/3 indent-3'>
+						<span className='text-justify indent-3'>
 							Natural da ilha do Pico, completou a sua formação na
 							Escola de Música do Município das Lajes do Pico e no
 							Ensino Artístico da Escola Básica e Secundária das
@@ -91,7 +91,7 @@ function Banda({}: Props) {
 						<p className='text-xl font-bold'>
 							- André Neves na Guitarra
 						</p>
-						<span className='text-justify md:w-2/3 indent-3'>
+						<span className='text-justify indent-3'>
 							André Neves na guitarra elétrica: Oriundo da ilha do
 							Pico, diplomado no Curso Regular na Escola de Jazz
 							Luís Villas-Boas do Hot Clube de Portugal em
@@ -145,7 +145,7 @@ function Banda({}: Props) {
 						<p className='text-xl font-bold'>
 							- Duarte Dutra na Bateria
 						</p>
-						<span className='text-justify md:w-2/3 indent-3'>
+						<span className='text-justify indent-3'>
 							Oriundo da ilha do Pico, Madalena, começou os seus
 							estudos como autodidata, através das filarmónicas
 							onde completou a sua formação através de
@@ -160,7 +160,7 @@ function Banda({}: Props) {
 					</li>
 				</ol>
 			</p>
-			<p className='text-justify md:w-2/3 indent-3'>
+			<p className='text-justify indent-3'>
 				Estes músicos provêm de origens musicais distintas que vão da
 				música clássica ao Jazz. Trabalhando a partir da Ilha do Pico,
 				Jazzmin resulta da experiência musical que cada um dos seus
@@ -172,7 +172,7 @@ function Banda({}: Props) {
 				a fervorosa dança ritmada, às melodia mais nostálgicas que todos
 				reconhecem, misturando-as com a poética música francesa.
 			</p>
-			<p className='text-justify md:w-2/3 indent-3'>
+			<p className='text-justify indent-3'>
 				Guiados pelo timbre dos 5 instrumentos distintos e a voz única
 				de Jean Daniel, compartilhamos sensações sonoras únicas, uma
 				viagem a diversas emoções e êxtases, apenas possíveis com a

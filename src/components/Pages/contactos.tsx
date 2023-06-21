@@ -4,7 +4,9 @@ type Props = {}
 
 function Contactos({}: Props) {
   return (
-		<div id='contactos' className='relative w-full h-full p-5 lg:p-20'>
+		<div
+			id='contactos'
+			className='relative p-5 lg:p-20 lg:mx-52'>
 			<div className='absolute inset-0 m-20'>
 				<iframe
 					width='100%'

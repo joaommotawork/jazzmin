@@ -6,11 +6,11 @@ function Repertorio({}: Props) {
   return (
 		<div
 			id='repertorio'
-			className='flex flex-col items-center justify-center gap-3 p-5 lg:p-20'>
-			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl md:w-2/3 underline-offset-8 decoration-orange-500 lg:pb-5'>
+			className='flex flex-col items-center justify-center gap-3 p-5 lg:p-20 lg:mx-52'>
+			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
 				Repertório
 			</h1>
-			<div className='flex flex-col w-full gap-5 md:flex-row md:w-3/4'>
+			<div className='flex flex-col w-full gap-5 md:flex-row'>
 				<div className='flex-1'>
 					<p className='px-4 py-3'>
 						Summertime:{' '}
