@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useCallback, useState } from 'react';
 import { Navigation, Pagination, Virtual } from 'swiper';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import forte1 from '../../../public/concertos/24072022MusicaNoForte/Forte1.jpg';
 import forte10 from '../../../public/concertos/24072022MusicaNoForte/Forte10.jpg';
 import forte11 from '../../../public/concertos/24072022MusicaNoForte/Forte11.jpg';
@@ -71,10 +71,6 @@ import banner4 from '../../../public/images/Banner4.jpeg';
 type Props = {};
 
 function Galeria({}: Props) {
-	const swiper = useSwiper();
-
-	console.log(swiper)
-
 	const elementos = [banner1, banner2, banner3, banner4];
 	const musicaNoForte = [
 		forte1,
@@ -145,24 +141,15 @@ function Galeria({}: Props) {
 	];
 
 	const [slides, setSlides] = useState<any>(elementos);
-	const [swiperRef, setSwiperRef] = useState<any>(null);
 
 	const updateSlides = (slides: any) => {
 		setSlides(slides);
 	};
 
-	/* useEffect(() => {
-		swiperRef?.update();
-		swiperRef?.updateSlides();
-	}, [slides, swiperRef]); */
-
-	const slider = useCallback((slides:any) => {
+	const slider = useCallback(() => {
 		return (
 			<Swiper
-				onSwiper={(swiper) => {
-					setSwiperRef(swiper);
-				}}
-				className='relative w-full h-full overflow-hidden border-orange-500 px-15 border-3'
+				className='relative w-full h-full overflow-hidden'
 				spaceBetween={50}
 				slidesPerView={1}
 				navigation={true}
@@ -174,7 +161,7 @@ function Galeria({}: Props) {
 				virtual>
 				{slides.map((slide: any, index: any) => {
 					return (
-						<SwiperSlide key={slide} virtualIndex={index}>
+						<SwiperSlide key={slide.src} virtualIndex={index}>
 							<Image
 								src={slide}
 								alt='Jazzmin'
@@ -182,7 +169,19 @@ function Galeria({}: Props) {
 								placeholder='blur'
 								priority
 								fill
-								style={{ objectFit: 'contain' }}
+								style={{
+									objectFit: 'cover',
+									filter: 'blur(8px)',
+								}}
+							/>
+							<Image
+								src={slide}
+								alt='Jazzmin'
+								loading={'eager'}
+								placeholder='blur'
+								priority
+								fill
+								style={{ objectFit: slide.width >= slide.height ? "cover" : 'contain', zIndex: 20 }}
 							/>
 						</SwiperSlide>
 					);
@@ -221,8 +220,8 @@ function Galeria({}: Props) {
 					Concerto Auditório Madalena - RTP Açores | 31/09/22
 				</button>
 			</div>
-			<div className='relative w-full h-full overflow-hidden'>
-				{slider(slides)}
+			<div className='relative w-full h-full min-h-[500px] overflow-hidden border-4 border-orange-500'>
+				{slider()}
 			</div>
 		</div>
 	);
