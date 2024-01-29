@@ -1,11 +1,13 @@
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 import { Provider } from 'react-redux';
-import Layout from '../components/Layout/Layout';
-import { store } from '../app/store';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/virtual';
+import { store } from '../app/store';
+import Layout from '../components/Layout/Layout';
 import '../styles/globals.css';
 import '../styles/react-calendar.css';
-import Head from 'next/head';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	return (

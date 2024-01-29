@@ -1,18 +1,8 @@
 import Image from 'next/image';
+import { useCallback, useState } from 'react';
+import { Navigation, Pagination, Virtual } from 'swiper';
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import banner1 from '../../../public/images/Banner1.jpeg';
-import banner2 from '../../../public/images/Banner2.jpeg';
-import banner3 from '../../../public/images/Banner3.jpeg';
-import banner4 from '../../../public/images/Banner4.jpeg';
 import forte1 from '../../../public/concertos/24072022MusicaNoForte/Forte1.jpg';
-import forte2 from '../../../public/concertos/24072022MusicaNoForte/Forte2.jpg';
-import forte3 from '../../../public/concertos/24072022MusicaNoForte/Forte3.jpg';
-import forte4 from '../../../public/concertos/24072022MusicaNoForte/Forte4.jpg';
-import forte5 from '../../../public/concertos/24072022MusicaNoForte/Forte5.jpg';
-import forte6 from '../../../public/concertos/24072022MusicaNoForte/Forte6.jpg';
-import forte7 from '../../../public/concertos/24072022MusicaNoForte/Forte7.jpg';
-import forte8 from '../../../public/concertos/24072022MusicaNoForte/Forte8.jpg';
-import forte9 from '../../../public/concertos/24072022MusicaNoForte/Forte9.jpg';
 import forte10 from '../../../public/concertos/24072022MusicaNoForte/Forte10.jpg';
 import forte11 from '../../../public/concertos/24072022MusicaNoForte/Forte11.jpg';
 import forte12 from '../../../public/concertos/24072022MusicaNoForte/Forte12.jpg';
@@ -23,19 +13,19 @@ import forte16 from '../../../public/concertos/24072022MusicaNoForte/Forte16.jpg
 import forte17 from '../../../public/concertos/24072022MusicaNoForte/Forte17.jpg';
 import forte18 from '../../../public/concertos/24072022MusicaNoForte/Forte18.jpg';
 import forte19 from '../../../public/concertos/24072022MusicaNoForte/Forte19.jpg';
+import forte2 from '../../../public/concertos/24072022MusicaNoForte/Forte2.jpg';
+import forte3 from '../../../public/concertos/24072022MusicaNoForte/Forte3.jpg';
+import forte4 from '../../../public/concertos/24072022MusicaNoForte/Forte4.jpg';
+import forte5 from '../../../public/concertos/24072022MusicaNoForte/Forte5.jpg';
+import forte6 from '../../../public/concertos/24072022MusicaNoForte/Forte6.jpg';
+import forte7 from '../../../public/concertos/24072022MusicaNoForte/Forte7.jpg';
+import forte8 from '../../../public/concertos/24072022MusicaNoForte/Forte8.jpg';
+import forte9 from '../../../public/concertos/24072022MusicaNoForte/Forte9.jpg';
 import festaAcoriana1 from '../../../public/concertos/240822SFestaAcoriana/Festa1.jpg';
 import festaAcoriana2 from '../../../public/concertos/240822SFestaAcoriana/Festa2.jpg';
 import festaAcoriana3 from '../../../public/concertos/240822SFestaAcoriana/Festa3.jpg';
 import festaAcoriana4 from '../../../public/concertos/240822SFestaAcoriana/Festa4.jpg';
 import concertoAudi1 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi1.jpg';
-import concertoAudi2 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi2.jpg';
-import concertoAudi3 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi3.jpg';
-import concertoAudi4 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi4.jpg';
-import concertoAudi5 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi5.jpg';
-import concertoAudi6 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi6.jpg';
-import concertoAudi7 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi7.jpg';
-import concertoAudi8 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi8.jpg';
-import concertoAudi9 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi9.jpg';
 import concertoAudi10 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi10.jpg';
 import concertoAudi11 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi11.jpg';
 import concertoAudi12 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi12.jpg';
@@ -46,6 +36,7 @@ import concertoAudi16 from '../../../public/concertos/310922ConcertoAuditorioDaM
 import concertoAudi17 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi17.jpg';
 import concertoAudi18 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi18.jpg';
 import concertoAudi19 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi19.jpg';
+import concertoAudi2 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi2.jpg';
 import concertoAudi20 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi20.jpg';
 import concertoAudi21 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi21.jpg';
 import concertoAudi22 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi22.jpg';
@@ -56,6 +47,7 @@ import concertoAudi26 from '../../../public/concertos/310922ConcertoAuditorioDaM
 import concertoAudi27 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi27.jpg';
 import concertoAudi28 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi28.jpg';
 import concertoAudi29 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi29.jpg';
+import concertoAudi3 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi3.jpg';
 import concertoAudi30 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi30.jpg';
 import concertoAudi31 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi31.jpg';
 import concertoAudi32 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi32.jpg';
@@ -65,12 +57,24 @@ import concertoAudi35 from '../../../public/concertos/310922ConcertoAuditorioDaM
 import concertoAudi36 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi36.jpg';
 import concertoAudi37 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi37.jpg';
 import concertoAudi38 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi38.jpg';
-import { Manipulation, Navigation } from 'swiper';
-import { useEffect, useState } from 'react';
+import concertoAudi4 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi4.jpg';
+import concertoAudi5 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi5.jpg';
+import concertoAudi6 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi6.jpg';
+import concertoAudi7 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi7.jpg';
+import concertoAudi8 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi8.jpg';
+import concertoAudi9 from '../../../public/concertos/310922ConcertoAuditorioDaMadalenaKateSaragaçoGomes/ConcertoAudi9.jpg';
+import banner1 from '../../../public/images/Banner1.jpeg';
+import banner2 from '../../../public/images/Banner2.jpeg';
+import banner3 from '../../../public/images/Banner3.jpeg';
+import banner4 from '../../../public/images/Banner4.jpeg';
 
 type Props = {};
 
 function Galeria({}: Props) {
+	const swiper = useSwiper();
+
+	console.log(swiper)
+
 	const elementos = [banner1, banner2, banner3, banner4];
 	const musicaNoForte = [
 		forte1,
@@ -147,17 +151,51 @@ function Galeria({}: Props) {
 		setSlides(slides);
 	};
 
-	useEffect(() => {
+	/* useEffect(() => {
 		swiperRef?.update();
 		swiperRef?.updateSlides();
-		console.log('SLIDES', slides)
-	}, [slides]);
+	}, [slides, swiperRef]); */
+
+	const slider = useCallback((slides:any) => {
+		return (
+			<Swiper
+				onSwiper={(swiper) => {
+					setSwiperRef(swiper);
+				}}
+				className='relative w-full h-full overflow-hidden border-orange-500 px-15 border-3'
+				spaceBetween={50}
+				slidesPerView={1}
+				navigation={true}
+				pagination={{ clickable: true }}
+				scrollbar={{ draggable: true }}
+				modules={[Navigation, Pagination, Virtual]}
+				autoplay
+				loop
+				virtual>
+				{slides.map((slide: any, index: any) => {
+					return (
+						<SwiperSlide key={slide} virtualIndex={index}>
+							<Image
+								src={slide}
+								alt='Jazzmin'
+								loading={'eager'}
+								placeholder='blur'
+								priority
+								fill
+								style={{ objectFit: 'contain' }}
+							/>
+						</SwiperSlide>
+					);
+				})}
+			</Swiper>
+		);
+	}, [slides])
 
 
 	return (
 		<div
 			id='galeria'
-			className='flex flex-col h-full gap-5 p-5 lg:p-20 lg:mx-52'>
+			className='flex flex-col h-full gap-5 p-5 pb-0 lg:p-20 lg:mx-52'>
 			<h1 className='text-3xl font-medium underline uppercase lg:text-5xl underline-offset-8 decoration-orange-500 lg:pb-5'>
 				Galeria
 			</h1>
@@ -183,32 +221,8 @@ function Galeria({}: Props) {
 					Concerto Auditório Madalena - RTP Açores | 31/09/22
 				</button>
 			</div>
-			<div className='w-full h-full'>
-				<Swiper
-					onSwiper={(swiper) => {
-						setSwiperRef(swiper);
-					}}
-					className='w-full h-full'
-					spaceBetween={50}
-					slidesPerView={1}
-					navigation={true}
-					modules={[Navigation, Manipulation]}
-					autoplay
-					loop>
-					{slides.map((slide: any, index: any) => {
-						return (
-							<SwiperSlide key={index}>
-								<Image
-									src={slide}
-									alt='Jazzmin'
-									fill
-									loading={'eager'}
-									priority
-								/>
-							</SwiperSlide>
-						);
-					})}
-				</Swiper>
+			<div className='relative w-full h-full overflow-hidden'>
+				{slider(slides)}
 			</div>
 		</div>
 	);

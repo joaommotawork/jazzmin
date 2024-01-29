@@ -12,9 +12,9 @@
 
 div.swiper-button-prev,
 div.swiper-button-next {
-color: #ffffff;
+	color: #000000;
 }
 
 span.swiper-pagination-bullet {
-background-color: #ffffff;
+	background-color: #000000;
 }
